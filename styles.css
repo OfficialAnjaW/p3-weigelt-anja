@@ -42,16 +42,24 @@ img {
   margin: 0 auto;
 }
 
+.align {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .block-one,
 .block-four {
   background-color: #1089dc;
   color: #ffffff;
+	transition: color 1000ms;
 }
 
 .block-two,
 .block-three {
   background-color: #ffffff;
   color: #1089dc;
+	transition: color 1000ms;
 }
 
 /*===================
@@ -72,3 +80,22 @@ img {
 }
 
 /* ----------------- END 1100PX MEDIA QUERY ----------------- */
+
+/*===================
+*
+* Fortune Actions
+*
+=====================*/
+
+/* Action 1 */
+
+.red-flash {
+	color: #b20000;
+	transition: color 1000ms;
+}
+
+/* Action 2 */
+
+.layer-two {
+	display: none;
+}
