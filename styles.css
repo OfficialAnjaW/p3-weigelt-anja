@@ -1,0 +1,74 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+    display:block;
+}
+
+/*===================
+*
+* Font Styles
+*
+=====================*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: #343535;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Kaushan Script', cursive;
+  color: #1089dc;
+}
+
+/*===================
+*
+* Squares
+*
+=====================*/
+
+img {
+  width: 200px;
+}
+
+.fortune-block {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.block-one,
+.block-four {
+  background-color: #1089dc;
+  color: #ffffff;
+}
+
+.block-two,
+.block-three {
+  background-color: #ffffff;
+  color: #1089dc;
+}
+
+/*===================
+*
+* Mobile Responsiveness
+*
+=====================*/
+
+/* ----------------- START 1100PX MEDIA QUERY ----------------- */
+
+@media (min-width: 1100px) {
+
+.fortune-teller {
+  display: flex;
+  justify-content: center;
+}
+
+}
+
+/* ----------------- END 1100PX MEDIA QUERY ----------------- */
