@@ -1,37 +1,42 @@
-// Action 1: Loop through the number of times the word is long
+// Action 1: Loop Through & Layer Change
 
-// Variables
-const blueBoxes = document.getElementsByClassName('block-blue');
-const whiteBoxes = document.getElementsByClassName('block-white');
+// Variables Layer 1
 
-//The Functionality (Blue Blocks)
-function loopBlue() {
+const layerOne = document.getElementById('layer-one');
+const wordBoxes = document.getElementsByClassName('word-block');
 
-  const changeBlue = () => this.classList.toggle('red-flash');
+// Variables Layer 2
+
+const layerTwo = document.getElementById('layer-two');
+const numberBoxes = document.getElementsByClassName('number-block')
+
+// Functionality: Loop Through
+
+function loopThrough() {
+
+  const changeColor = () => this.classList.toggle('red-flash');
 
   for(let i = 0; i < this.textContent.length * 2; i++) {
-    setTimeout(changeBlue, i * 1000);
+    setTimeout(changeColor, i * 1000);
   };
 
 };
 
-//The Event Listener (Blue Blocks)
-for (let i = 0; i < blueBoxes.length; i++) {
-  blueBoxes[i].addEventListener('click', loopBlue);
+// Functionality: Change Layer
+
+function changeLayer() {
+  const swap = () => {
+    layerOne.classList.add('hide');
+    layerTwo.classList.remove('hide');
+  }
+  setTimeout(swap, this.textContent.length * 2 * 1000);
+}
+
+// Event Listener
+
+for (let i = 0; i < wordBoxes.length; i++) {
+  wordBoxes[i].addEventListener('click', loopThrough);
+  wordBoxes[i].addEventListener('click', changeLayer);
 };
 
-//The Functionality (White Blocks)
-function loopWhite() {
-
-  const changeWhite = () => this.classList.toggle('red-flash');
-
-  for(let i = 0; i < this.textContent.length * 2; i++) {
-    setTimeout(changeWhite, i * 1000);
-  };
-
-};
-
-//The Event Listener (White Blocks)
-for (let i = 0; i < whiteBoxes.length; i++) {
-  whiteBoxes[i].addEventListener('click', loopWhite);
-};
+// Action 2: Loop Through & Layer Change

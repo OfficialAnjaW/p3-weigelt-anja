@@ -40,26 +40,15 @@ img {
   width: 250px;
   height: 250px;
   margin: 0 auto;
+	background-color: #1089dc;
+	color: #ffffff;
+	transition: color 1000ms;
 }
 
 .align {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-.block-one,
-.block-four {
-  background-color: #1089dc;
-  color: #ffffff;
-	transition: color 1000ms;
-}
-
-.block-two,
-.block-three {
-  background-color: #ffffff;
-  color: #1089dc;
-	transition: color 1000ms;
 }
 
 /*===================
@@ -96,6 +85,6 @@ img {
 
 /* Action 2 */
 
-.layer-two {
+.hide {
 	display: none;
 }
