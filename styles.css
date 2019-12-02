@@ -28,27 +28,48 @@ h1 {
 
 /*===================
 *
+* Spacings
+*
+=====================*/
+
+header {
+	padding-top: 50px;
+}
+
+.fortune-teller {
+	padding-bottom: 100px;
+}
+
+/*===================
+*
 * Squares
 *
 =====================*/
 
-img {
-  width: 200px;
+.fortune-block {
+	margin: 0 50px;
 }
 
-.fortune-block {
-  width: 250px;
-  height: 250px;
+h3 {
+	width: 200px;
+	padding: 20px 0;
   margin: 0 auto;
 	background-color: #1089dc;
 	color: #ffffff;
-	transition: color 1000ms;
+	transition: background-color color 1000ms;
 }
 
-.align {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+img {
+	padding: 60px 0 10px 0;
+}
+
+#layer-one img {
+  height: 130px;
+}
+
+#layer-three img,
+#layer-two img {
+	height: 50px;
 }
 
 /*===================
@@ -76,14 +97,15 @@ img {
 *
 =====================*/
 
-/* Action 1 */
+/* Change Color */
 
-.red-flash {
-	color: #b20000;
-	transition: color 1000ms;
+.button-flash {
+	color: #1089dc;
+	background-color: #ffffff;
+	transition: background-color color 1000ms;
 }
 
-/* Action 2 */
+/* Change Layer */
 
 .hide {
 	display: none;

@@ -1,4 +1,4 @@
-// Action 1: Loop Through & Layer Change
+// Global Variables
 
 // Variables Layer 1
 
@@ -8,35 +8,67 @@ const wordBoxes = document.getElementsByClassName('word-block');
 // Variables Layer 2
 
 const layerTwo = document.getElementById('layer-two');
-const numberBoxes = document.getElementsByClassName('number-block')
+const numberBoxesOne = document.getElementsByClassName('number-block-one')
 
-// Functionality: Loop Through
+// Variables Layer 3
 
-function loopThrough() {
+const layerThree = document.getElementById('layer-three');
+const numberBoxesTwo = document.getElementsByClassName('number-block-two')
 
-  const changeColor = () => this.classList.toggle('red-flash');
+// Functionality: Loop Through (1)
+
+function loopThroughOne() {
+
+  const changeColorOne = () => this.classList.toggle('button-flash');
 
   for(let i = 0; i < this.textContent.length * 2; i++) {
-    setTimeout(changeColor, i * 1000);
+    setTimeout(changeColorOne, i * 1000);
   };
 
 };
 
-// Functionality: Change Layer
+// Functionality: Change Layer (1)
 
-function changeLayer() {
-  const swap = () => {
+function changeLayerOne() {
+  const swapOne = () => {
     layerOne.classList.add('hide');
     layerTwo.classList.remove('hide');
   }
-  setTimeout(swap, this.textContent.length * 2 * 1000);
+  setTimeout(swapOne, this.textContent.length * 2 * 1000);
 }
 
 // Event Listener
 
 for (let i = 0; i < wordBoxes.length; i++) {
-  wordBoxes[i].addEventListener('click', loopThrough);
-  wordBoxes[i].addEventListener('click', changeLayer);
+  wordBoxes[i].addEventListener('click', loopThroughOne);
+  wordBoxes[i].addEventListener('click', changeLayerOne);
 };
 
-// Action 2: Loop Through & Layer Change
+// Functionality: Loop Through (2)
+
+function loopThroughTwo() {
+
+  const changeColorTwo = () => this.classList.toggle('button-flash');
+
+  for(let i = 0; i < Number(this.textContent) * 2; i++) {
+    setTimeout(changeColorTwo, i * 1000);
+  };
+
+};
+
+// Functionality: Change Layer (2)
+
+function changeLayerTwo() {
+  const swapTwo = () => {
+    layerTwo.classList.add('hide');
+    layerThree.classList.remove('hide');
+  }
+  setTimeout(swapTwo, this.textContent.length * 2 * 1000);
+}
+
+// Event Listener
+
+for (let i = 0; i < numberBoxesOne.length; i++) {
+  numberBoxesOne[i].addEventListener('click', loopThroughTwo);
+  numberBoxesOne[i].addEventListener('click', changeLayerTwo);
+};
