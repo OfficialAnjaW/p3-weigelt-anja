@@ -8,12 +8,14 @@ const wordBoxes = document.getElementsByClassName('word-block');
 // Variables Layer 2
 
 const layerTwo = document.getElementById('layer-two');
-const numberBoxesOne = document.getElementsByClassName('number-block-one')
+const numberBoxesOne = document.getElementsByClassName('number-block-one');
 
 // Variables Layer 3
 
 const layerThree = document.getElementById('layer-three');
-const numberBoxesTwo = document.getElementsByClassName('number-block-two')
+const numberBoxesTwo = document.getElementsByClassName('number-block-two');
+
+// Action (1)
 
 // Functionality: Loop Through (1)
 
@@ -37,12 +39,14 @@ function changeLayerOne() {
   setTimeout(swapOne, this.textContent.length * 2 * 1000);
 }
 
-// Event Listener
+// Event Listener (1)
 
 for (let i = 0; i < wordBoxes.length; i++) {
   wordBoxes[i].addEventListener('click', loopThroughOne);
   wordBoxes[i].addEventListener('click', changeLayerOne);
 };
+
+// Action (2)
 
 // Functionality: Loop Through (2)
 
@@ -66,7 +70,7 @@ function changeLayerTwo() {
   setTimeout(swapTwo, this.textContent.length * 2 * 1000);
 }
 
-// Event Listener
+// Event Listener (2)
 
 for (let i = 0; i < numberBoxesOne.length; i++) {
   numberBoxesOne[i].addEventListener('click', loopThroughTwo);
