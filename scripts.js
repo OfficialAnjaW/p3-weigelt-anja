@@ -19,6 +19,13 @@ const numberBoxesTwo = document.getElementsByClassName('number-block-two');
 
 const layerFour = document.getElementById('layer-four');
 
+// Variables Steps (Paragraphs)
+
+const stepOne = document.getElementById('step-one');
+const stepTwo = document.getElementById('step-two');
+const stepThree = document.getElementById('step-three');
+const stepFour = document.getElementById('step-four');
+
 // Action (1): Word Loop
 
 // Functionality: Loop Through (1)
@@ -37,6 +44,8 @@ function loopThroughOne() {
 
 function changeLayerOne() {
   const swapOne = () => {
+    stepOne.classList.add('hide');
+    stepTwo.classList.remove('hide');
     layerOne.classList.add('hide');
     layerTwo.classList.remove('hide');
   }
@@ -68,6 +77,8 @@ function loopThroughTwo() {
 
 function changeLayerTwo() {
   const swapTwo = () => {
+    stepTwo.classList.add('hide');
+    stepThree.classList.remove('hide');
     layerTwo.classList.add('hide');
     layerThree.classList.remove('hide');
   }
@@ -99,6 +110,8 @@ function loopThroughThree() {
 
 function changeLayerThree() {
   const swapThree = () => {
+    stepThree.classList.add('hide');
+    stepFour.classList.remove('hide');
     layerThree.classList.add('hide');
     layerFour.classList.remove('hide');
   }
