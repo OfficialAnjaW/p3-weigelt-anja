@@ -36,7 +36,7 @@ header {
 	padding-top: 50px;
 }
 
-.fortune-teller {
+main {
 	padding-bottom: 100px;
 }
 
@@ -70,6 +70,21 @@ img {
 #layer-three img,
 #layer-two img {
 	height: 50px;
+}
+
+.fortune-styling {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #1089dc;
+	height: 350px;
+	width: 350px;
+	margin: 0 auto;
+}
+
+.fortune-styling p {
+	color: #ffffff;
+	font-size: 3.5rem;
 }
 
 /*===================

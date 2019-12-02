@@ -15,7 +15,11 @@ const numberBoxesOne = document.getElementsByClassName('number-block-one');
 const layerThree = document.getElementById('layer-three');
 const numberBoxesTwo = document.getElementsByClassName('number-block-two');
 
-// Action (1)
+// Variables Layer 4
+
+const layerFour = document.getElementById('layer-four');
+
+// Action (1): Word Loop
 
 // Functionality: Loop Through (1)
 
@@ -46,7 +50,7 @@ for (let i = 0; i < wordBoxes.length; i++) {
   wordBoxes[i].addEventListener('click', changeLayerOne);
 };
 
-// Action (2)
+// Action (2): First Number Loop
 
 // Functionality: Loop Through (2)
 
@@ -67,7 +71,7 @@ function changeLayerTwo() {
     layerTwo.classList.add('hide');
     layerThree.classList.remove('hide');
   }
-  setTimeout(swapTwo, this.textContent.length * 2 * 1000);
+  setTimeout(swapTwo, Number(this.textContent) * 2 * 1000);
 }
 
 // Event Listener (2)
@@ -76,3 +80,48 @@ for (let i = 0; i < numberBoxesOne.length; i++) {
   numberBoxesOne[i].addEventListener('click', loopThroughTwo);
   numberBoxesOne[i].addEventListener('click', changeLayerTwo);
 };
+
+//Action (3): Second Number Loop
+
+// Functionality: Loop Through (3)
+
+function loopThroughThree() {
+
+  const changeColorThree = () => this.classList.toggle('button-flash');
+
+  for(let i = 0; i < Number(this.textContent) * 2; i++) {
+    setTimeout(changeColorThree, i * 1000);
+  };
+
+};
+
+// Functionality: Change Layer (3)
+
+function changeLayerThree() {
+  const swapThree = () => {
+    layerThree.classList.add('hide');
+    layerFour.classList.remove('hide');
+  }
+  setTimeout(swapThree, Number(this.textContent) * 2 * 1000);
+}
+
+// Event Listener (3)
+
+for (let i = 0; i < numberBoxesOne.length; i++) {
+  numberBoxesTwo[i].addEventListener('click', loopThroughThree);
+  numberBoxesTwo[i].addEventListener('click', changeLayerThree);
+};
+
+// Action (4): Reveal Fortune
+
+const randomFortune = ['Prost', 'Servus', 'Schmarrn'];
+
+function showFortune() {
+  randomFortune.sort(function(a, b){return 0.5 - Math.random()});
+  const randomFortuneParagraph = document.createElement('p');
+  layerFour.appendChild(randomFortuneParagraph);
+  const randomFortuneText = document.createTextNode(randomFortune[0]);
+  randomFortuneParagraph.appendChild(randomFortuneText);
+};
+
+showFortune();
