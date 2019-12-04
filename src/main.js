@@ -129,8 +129,8 @@ for (let i = 0; i < numberBoxesOne.length; i++) {
 
 const randomFortune = ['Prost', 'Servus', 'Schmarrn'];
 
-function showFortune() {
-  randomFortune.sort(function(a, b){return 0.5 - Math.random()});
+const showFortune = () => {
+  randomFortune.sort((a, b) => {return 0.5 - Math.random()});
   const randomFortuneParagraph = document.createElement('p');
   layerFour.appendChild(randomFortuneParagraph);
   const randomFortuneText = document.createTextNode(randomFortune[0]);
