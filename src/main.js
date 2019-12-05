@@ -131,9 +131,9 @@ const randomFortune = ['Prost', 'Servus', 'Schmarrn'];
 
 const showFortune = () => {
   randomFortune.sort((a, b) => {return 0.5 - Math.random()});
+  const randomFortuneText = document.createTextNode(randomFortune[0]);
   const randomFortuneParagraph = document.createElement('p');
   layerFour.appendChild(randomFortuneParagraph);
-  const randomFortuneText = document.createTextNode(randomFortune[0]);
   randomFortuneParagraph.appendChild(randomFortuneText);
 };
 
