@@ -28,7 +28,7 @@ h1 {
 
 /*===================
 *
-* Spacings
+* Spacing
 *
 =====================*/
 
@@ -88,7 +88,8 @@ img {
 
 .fortune-styling p {
 	color: #ffffff;
-	font-size: 3.5rem;
+	font-size: 1.5rem;
+	padding: 1%;
 }
 
 #layer-four {
@@ -97,33 +98,9 @@ img {
 
 /*===================
 *
-* Footer
-*
-=====================*/
-
-footer {
-	background-color: #1089dc;
-	color: #ffffff;
-	padding: 4% 0;
-}
-
-/*===================
-*
 * Mobile Responsiveness
 *
 =====================*/
-
-/* ----------------- START 600PX MEDIA QUERY ----------------- */
-
-@media (min-width: 600px) {
-
-footer {
-	padding: 3% 0;
-}
-
-}
-
-/* ----------------- END 600PX MEDIA QUERY ----------------- */
 
 /* ----------------- START 1100PX MEDIA QUERY ----------------- */
 
@@ -132,10 +109,6 @@ footer {
 .fortune-teller {
   display: flex;
   justify-content: center;
-}
-
-footer {
-	padding: 1.5% 0;
 }
 
 }

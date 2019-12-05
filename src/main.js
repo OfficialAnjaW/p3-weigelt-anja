@@ -48,9 +48,9 @@ function changeLayerOne() {
     stepTwo.classList.remove('hide');
     layerOne.classList.add('hide');
     layerTwo.classList.remove('hide');
-  }
+  };
   setTimeout(swapOne, this.textContent.length * 2 * 1000);
-}
+};
 
 // Event Listener (1)
 
@@ -81,9 +81,9 @@ function changeLayerTwo() {
     stepThree.classList.remove('hide');
     layerTwo.classList.add('hide');
     layerThree.classList.remove('hide');
-  }
+  };
   setTimeout(swapTwo, Number(this.textContent) * 2 * 1000);
-}
+};
 
 // Event Listener (2)
 
@@ -114,9 +114,9 @@ function changeLayerThree() {
     stepFour.classList.remove('hide');
     layerThree.classList.add('hide');
     layerFour.classList.remove('hide');
-  }
+  };
   setTimeout(swapThree, Number(this.textContent) * 2 * 1000);
-}
+};
 
 // Event Listener (3)
 
@@ -127,14 +127,13 @@ for (let i = 0; i < numberBoxesOne.length; i++) {
 
 // Action (4): Reveal Fortune
 
-const randomFortune = ['Prost', 'Servus', 'Schmarrn'];
+const randomFortune = ['The hills are alive with the sound of music.', 'You will have pretzels for breakfast, lunch and dinner.', 'You will spend the afternoon strolling through the Black Forrest.', 'Your lunch will consist of a bratwurst and your favorite beer.', 'Your pretzel will contain the right amount of salt.', 'Your favorite pair of Lederhosen is freshly dry-cleaned.', 'It’s almost time for Oktoberfest!', 'Your next vacation destination is Munich.', 'Your favorite Bavarian marching band is in town.', 'Your favorite bakery is open on Sundays.'];
 
 const showFortune = () => {
   randomFortune.sort((a, b) => {return 0.5 - Math.random()});
   const randomFortuneText = document.createTextNode(randomFortune[0]);
-  const randomFortuneParagraph = document.createElement('p');
+  const randomFortuneParagraph = document.createElement('p');    randomFortuneParagraph.appendChild(randomFortuneText);
   layerFour.appendChild(randomFortuneParagraph);
-  randomFortuneParagraph.appendChild(randomFortuneText);
 };
 
 showFortune();
